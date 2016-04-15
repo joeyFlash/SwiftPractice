@@ -26,14 +26,16 @@ class ViewController: UIViewController,UITableViewDelegate {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return cellContent.count
+        return 20
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+
+        let timesTable = Int(sliderValue.value * 20)
         
-        cell.textLabel?.text = cellContent[indexPath.row]
+        cell.textLabel?.text = String(timesTable * indexPath.row)
         
         return cell
     }
