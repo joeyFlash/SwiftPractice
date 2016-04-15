@@ -18,38 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-mu-5rV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-ro-ger">
+                                <rect key="frame" x="14" y="28" width="292" height="31"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="0f1-ce-7VN"/>
+                                </connections>
+                            </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nMh-vi-uxJ">
+                                <rect key="frame" x="-4" y="66" width="328" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="JC5-8a-kwQ">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="t9W-Aj-hmQ">
+                                        <rect key="frame" x="0.0" y="28" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JC5-8a-kwQ" id="vlg-oT-dJa">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9W-Aj-hmQ" id="Cdd-yF-PVJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gVz-2Y-A2I"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Pha-Qp-O8m"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XmQ-5d-m8X"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rTC-cc-GJO"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fkg-mu-5rV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="E6G-qG-0eM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fkg-mu-5rV" secondAttribute="bottom" id="LcW-Jv-OY0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fkg-mu-5rV" secondAttribute="trailing" constant="-20" id="XPT-yU-4yi"/>
-                            <constraint firstItem="fkg-mu-5rV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="awn-Nc-qRf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nMh-vi-uxJ" secondAttribute="trailing" constant="-20" id="004-wN-TI4"/>
+                            <constraint firstItem="yEQ-ro-ger" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CJg-oJ-iDN"/>
+                            <constraint firstItem="nMh-vi-uxJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="M7Y-4H-b13"/>
+                            <constraint firstItem="yEQ-ro-ger" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wgs-Yz-AgX"/>
+                            <constraint firstItem="nMh-vi-uxJ" firstAttribute="top" secondItem="yEQ-ro-ger" secondAttribute="bottom" constant="8" id="aKD-N5-ggg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nMh-vi-uxJ" secondAttribute="bottom" id="mkn-XN-Grc"/>
+                            <constraint firstItem="yEQ-ro-ger" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rOz-QX-MV2"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="sliderValue" destination="yEQ-ro-ger" id="x0i-aR-COn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="382"/>
+            <point key="canvasLocation" x="-47" y="369"/>
         </scene>
     </scenes>
 </document>

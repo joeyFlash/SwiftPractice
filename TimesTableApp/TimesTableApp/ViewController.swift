@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate {
 
+    @IBOutlet var sliderValue: UISlider!
     
     var cellContent = ["joeyFlash", "superman", "wolverine", "deadpool"]
     
@@ -36,5 +37,15 @@ class ViewController: UIViewController,UITableViewDelegate {
         
         return cell
     }
+    
+    
+    @IBAction func sliderMoved(sender: AnyObject)
+    {
+        
+        print(sliderValue)
+    }
+    
+    
+    
 }
 
