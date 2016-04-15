@@ -12,6 +12,8 @@ class ViewController: UIViewController,UITableViewDelegate {
 
     @IBOutlet var sliderValue: UISlider!
     
+    @IBOutlet var table: UITableView!
+    
     var cellContent = ["joeyFlash", "superman", "wolverine", "deadpool"]
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate {
 
         let timesTable = Int(sliderValue.value * 20)
         
-        cell.textLabel?.text = String(timesTable * indexPath.row)
+        cell.textLabel?.text = String(timesTable * (indexPath.row + 1))
         
         return cell
     }
@@ -44,7 +46,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     @IBAction func sliderMoved(sender: AnyObject)
     {
         
-        print(sliderValue)
+        table.reloadData()
     }
     
     

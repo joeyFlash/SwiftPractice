@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-ro-ger">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.050000000000000003" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-ro-ger">
                                 <rect key="frame" x="14" y="28" width="292" height="31"/>
                                 <connections>
                                     <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="0f1-ce-7VN"/>
@@ -57,6 +57,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="sliderValue" destination="yEQ-ro-ger" id="x0i-aR-COn"/>
+                        <outlet property="table" destination="nMh-vi-uxJ" id="GgF-jM-4ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
