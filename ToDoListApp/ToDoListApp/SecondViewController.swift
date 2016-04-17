@@ -18,6 +18,8 @@ class SecondViewController: UIViewController {
         toDoList.append(item.text!)
         
         item.text = ""
+        
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
     }
     
     override func viewDidLoad() {
