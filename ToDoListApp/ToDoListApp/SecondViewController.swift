@@ -14,8 +14,10 @@ class SecondViewController: UIViewController {
     
     @IBAction func addItem(sender: AnyObject)
     {
+     
+        toDoList.append(item.text!)
         
-        
+        item.text = ""
     }
     
     override func viewDidLoad() {
@@ -28,6 +30,14 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!)-> Bool
+    {
+        item.resignFirstResponder()
+        return true
+    }
 }
 
