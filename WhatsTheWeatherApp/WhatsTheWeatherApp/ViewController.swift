@@ -31,12 +31,12 @@ class ViewController: UIViewController {
                     
                     print(urlContent)
                     
-                    var urlContentArray = urlContent?.componentsSeparatedByString("<span class=\"phrase\">")
-                    print(urlContentArray![1])
+                    var urlContentArray = urlContent.componentsSeparatedByString("<span class=\"phrase\">")
+                    print(urlContentArray[1])
                     
-                    if(urlContentArray?.count > 0)
+                    if(urlContentArray.count > 0)
                     {
-                        var weatherArray = urlContentArray![1].componentsSeparatedByString("</span>")
+                        var weatherArray = urlContentArray[1].componentsSeparatedByString("</span>")
                         weather = weatherArray[0] as String
                         weather = weather.stringByReplacingOccurrencesOfString("&deg;", withString: "º")
                     }
