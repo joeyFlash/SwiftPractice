@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 0
     @IBOutlet var animationImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,17 @@ class ViewController: UIViewController {
 
     @IBAction func updateImage(sender: AnyObject)
     {
-        animationImage.image = UIImage(named: "frame1.png")
+        
+        if(counter == 7)
+        {
+             counter = 0
+        }
+        else
+        {
+           counter += 1
+        }
+        
+        animationImage.image = UIImage(named: "frame\(counter).png")
         
     }
 
