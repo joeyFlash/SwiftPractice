@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     var counter = 0
     @IBOutlet var animationImage: UIImageView!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -25,17 +27,16 @@ class ViewController: UIViewController {
     @IBAction func updateImage(sender: AnyObject)
     {
         
-        if(counter == 7)
+        if(counter == 6)
         {
-             counter = 0
+            counter = 0
         }
         else
         {
-           counter += 1
+            counter += 1
         }
         
         animationImage.image = UIImage(named: "frame\(counter).png")
-        
     }
 
 }
