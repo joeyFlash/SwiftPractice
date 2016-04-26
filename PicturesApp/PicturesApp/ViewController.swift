@@ -12,14 +12,14 @@ class ViewController: UIViewController {
 
     var counter = 0
     var timer = NSTimer()
-    
+    var isAnimating = true
     @IBOutlet var animationImage: UIImageView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "doAnimation", userInfo: nil, repeats: true)
+//        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "doAnimation", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +30,16 @@ class ViewController: UIViewController {
     @IBAction func updateImage(sender: AnyObject)
     {
         
-//       timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector:#selector(ViewController.doAnimation()), userInfo: nil, repeats: true)
-//        
-//        timer.invalidate()
+        if(isAnimating)
+        {
+            timer.invalidate()
+            isAnimating = false
+        }
+        else
+        {
+          timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.doAnimation), userInfo: nil, repeats: true)
+          isAnimating = true
+        }
     }
     
     func doAnimation()

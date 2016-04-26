@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE3-1D-7jC">
-                                <rect key="frame" x="111" y="483" width="97" height="30"/>
-                                <state key="normal" title="Update Image"/>
+                                <rect key="frame" x="101" y="483" width="117" height="30"/>
+                                <state key="normal" title="Start/Stop Image"/>
                                 <connections>
                                     <action selector="updateImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gws-Yx-EE8"/>
                                 </connections>
