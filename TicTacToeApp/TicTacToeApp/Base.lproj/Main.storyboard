@@ -1,25 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board.png" translatesAutoresizingMaskIntoConstraints="NO" id="Klt-cs-A8E">
+                                <rect key="frame" x="21" y="205" width="334" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="vn8-my-M6l"/>
+                                    <constraint firstAttribute="width" constant="334" id="xSa-3R-oNh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-bj-bQP">
+                                <rect key="frame" x="31" y="215" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="6V2-tf-P52"/>
+                                    <constraint firstAttribute="width" constant="75" id="8Pl-KN-wUs"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWW-qo-zjB">
+                                <rect key="frame" x="31" y="296" width="75" height="75"/>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-YE-jCU">
+                                <rect key="frame" x="150" y="215" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3Uz-ZD-GFS"/>
+                                    <constraint firstAttribute="height" constant="75" id="fMj-O1-a45"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb4-IK-S3l">
+                                <rect key="frame" x="31" y="387" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="CoO-iD-RGw"/>
+                                    <constraint firstAttribute="width" constant="75" id="ZgS-Uy-O60"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-vC-Ity">
+                                <rect key="frame" x="150" y="387" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="96M-r2-i0z"/>
+                                    <constraint firstAttribute="height" constant="75" id="pLh-o0-OGO"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-wb-713">
+                                <rect key="frame" x="263" y="387" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="8bV-aC-44J"/>
+                                    <constraint firstAttribute="height" constant="75" id="OTL-cN-si7"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e56-7C-eaC">
+                                <rect key="frame" x="263" y="215" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="d1b-rd-rCr"/>
+                                    <constraint firstAttribute="width" constant="75" id="vEU-tZ-Cjx"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-Cv-5aw">
+                                <rect key="frame" x="263" y="296" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9s4-xe-KVg"/>
+                                    <constraint firstAttribute="width" constant="75" id="D4P-c7-duP"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="482-EZ-vTw">
+                                <rect key="frame" x="151" y="296" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="AL7-Lk-f9K"/>
+                                    <constraint firstAttribute="height" constant="75" id="bIf-pA-hC1"/>
+                                </constraints>
+                                <state key="normal" image="nought.png"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DGd-bj-bQP" firstAttribute="leading" secondItem="Klt-cs-A8E" secondAttribute="leading" constant="10" id="7aj-YF-CMm"/>
+                            <constraint firstItem="8mX-Cv-5aw" firstAttribute="trailing" secondItem="X2s-wb-713" secondAttribute="trailing" id="84q-oS-nkY"/>
+                            <constraint firstItem="Zxe-vC-Ity" firstAttribute="leading" secondItem="RVP-YE-jCU" secondAttribute="leading" id="9TC-S0-nYz"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="leading" secondItem="hb4-IK-S3l" secondAttribute="leading" id="Abv-oT-fof"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="top" secondItem="482-EZ-vTw" secondAttribute="top" id="BSU-AS-Geq"/>
+                            <constraint firstItem="e56-7C-eaC" firstAttribute="trailing" secondItem="Klt-cs-A8E" secondAttribute="trailing" constant="-17" id="Fdz-LT-fgL"/>
+                            <constraint firstItem="482-EZ-vTw" firstAttribute="leading" secondItem="mWW-qo-zjB" secondAttribute="trailing" constant="45" id="GZH-6W-OfT"/>
+                            <constraint firstItem="Zxe-vC-Ity" firstAttribute="top" secondItem="X2s-wb-713" secondAttribute="top" id="K9m-AZ-cc6"/>
+                            <constraint firstItem="hb4-IK-S3l" firstAttribute="top" secondItem="mWW-qo-zjB" secondAttribute="bottom" constant="16" id="MdA-Kz-iWH"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="leading" secondItem="DGd-bj-bQP" secondAttribute="leading" id="Mvh-pv-BlY"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="bottom" secondItem="8mX-Cv-5aw" secondAttribute="bottom" id="Pni-Rc-Icq"/>
+                            <constraint firstItem="e56-7C-eaC" firstAttribute="top" secondItem="Klt-cs-A8E" secondAttribute="top" constant="10" id="URU-Ve-BJX"/>
+                            <constraint firstItem="RVP-YE-jCU" firstAttribute="top" secondItem="Klt-cs-A8E" secondAttribute="top" constant="10" id="WQp-fp-sE1"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="trailing" secondItem="DGd-bj-bQP" secondAttribute="trailing" id="Yod-p8-aLe"/>
+                            <constraint firstItem="Klt-cs-A8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zdk-lK-0LH"/>
+                            <constraint firstItem="8mX-Cv-5aw" firstAttribute="leading" secondItem="X2s-wb-713" secondAttribute="leading" id="aJZ-Mv-COB"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="bottom" secondItem="482-EZ-vTw" secondAttribute="bottom" id="fdf-4x-yZg"/>
+                            <constraint firstItem="8mX-Cv-5aw" firstAttribute="leading" secondItem="e56-7C-eaC" secondAttribute="leading" id="g7N-ff-q2j"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="top" secondItem="Klt-cs-A8E" secondAttribute="top" constant="91" id="glR-vR-8ox"/>
+                            <constraint firstItem="RVP-YE-jCU" firstAttribute="centerX" secondItem="Klt-cs-A8E" secondAttribute="centerX" id="hBr-xO-DCX"/>
+                            <constraint firstItem="Klt-cs-A8E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hE3-YF-O8O"/>
+                            <constraint firstItem="DGd-bj-bQP" firstAttribute="top" secondItem="Klt-cs-A8E" secondAttribute="top" constant="10" id="jeF-RL-uGv"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="top" secondItem="8mX-Cv-5aw" secondAttribute="top" id="qcx-Bu-1w1"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="centerY" secondItem="Klt-cs-A8E" secondAttribute="centerY" id="r0e-R1-crf"/>
+                            <constraint firstItem="X2s-wb-713" firstAttribute="top" secondItem="8mX-Cv-5aw" secondAttribute="bottom" constant="16" id="rOu-z9-oda"/>
+                            <constraint firstItem="mWW-qo-zjB" firstAttribute="trailing" secondItem="hb4-IK-S3l" secondAttribute="trailing" id="zO3-uc-tfM"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="187.5" y="311.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="board.png" width="744" height="783"/>
+        <image name="nought.png" width="214" height="214"/>
+    </resources>
 </document>
