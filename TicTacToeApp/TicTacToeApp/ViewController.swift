@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     
     var winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
+    @IBOutlet var gameOverLabel: UILabel!
+    
+    @IBOutlet var playAgainButton: UIButton!
+    
+    @IBAction func playAgainButtonPressed(sender: AnyObject) {
+    }
+    
     @IBAction func buttonPressed(sender: AnyObject) {
         
         
@@ -50,14 +57,23 @@ class ViewController: UIViewController {
                if(gameBoard[combo[0]] != 0 && gameBoard[combo[0]] == gameBoard[combo[1]] && gameBoard[combo[1]] == gameBoard[combo[2]])
                {
                 
-                if(gameBoard[combo[0]] == 1)
+                var labelText = "Noughts has won"
+                
+                if(gameBoard[combo[0]] == 2)
                 {
-                    print("Noughts have won")
+                    labelText = "Crosses has won"
                 }
-                else
-                {
-                    print("Crosses have one")
-                }
+                
+                gameOverLabel.text = labelText
+                
+                gameOverLabel.hidden = false
+                playAgainButton.hidden = false
+                
+                UIView.animateWithDuration(0.5, animations: {
+                    self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x+400, self.gameOverLabel.center.y)
+                    
+                    self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x+400, self.playAgainButton.center.y)
+                })
                 
                  gameActive = false
                }
@@ -74,6 +90,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gameOverLabel.hidden = true
+        playAgainButton.hidden = true
+        
+        gameOverLabel.center = CGPointMake(gameOverLabel.center.x-400, gameOverLabel.center.y)
+        playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -82,6 +104,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    override func viewDidLayoutSubviews()
+    {
+        super.viewDidLayoutSubviews()
+//        gameOverLabel.center = CGPointMake(gameOverLabel.center.x-400, gameOverLabel.center.y)
+//        playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y)
+    }
 }
 
