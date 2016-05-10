@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     var winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
+    var turn = 0
+    
     @IBOutlet var gameOverLabel: UILabel!
     
     @IBOutlet var playAgainButton: UIButton!
@@ -31,6 +33,8 @@ class ViewController: UIViewController {
         gameActive = true
         
         gameBoard = [0,0,0,0,0,0,0,0,0]
+        
+        turn = 0
         
         var button : UIButton
         
@@ -98,6 +102,22 @@ class ViewController: UIViewController {
                  gameActive = false
                }
                 
+            }
+            
+            turn += 1
+            if(turn == 9)
+            {
+                gameOverLabel.text = "CATS!"
+                gameOverLabel.hidden = false
+                playAgainButton.hidden = false
+                
+                UIView.animateWithDuration(0.5, animations: {
+                    self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x+400, self.gameOverLabel.center.y)
+                    
+                    self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x+400, self.playAgainButton.center.y)
+                })
+                
+                gameActive = false
             }
             sender.setImage(image, forState: .Normal)
             print(sender.tag)
