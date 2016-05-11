@@ -105,7 +105,7 @@ class ViewController: UIViewController {
             }
             
             turn += 1
-            if(turn == 9)
+            if(turn == 9 && gameActive)
             {
                 gameOverLabel.text = "CATS!"
                 gameOverLabel.hidden = false
