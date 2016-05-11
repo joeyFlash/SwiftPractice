@@ -17,7 +17,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var latitude: CLLocationDegrees = 35.172910
+        var longitude: CLLocationDegrees = -106.590837
+        var latDelta: CLLocationDegrees = 0.01
+        var longDelta: CLLocationDegrees = 0.01
+        var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        mapView.setRegion(region, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
