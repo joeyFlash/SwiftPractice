@@ -12,6 +12,7 @@
 		0597B3271CE2D39F00FE15F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597B3251CE2D39F00FE15F3 /* Main.storyboard */; };
 		0597B3291CE2D39F00FE15F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0597B3281CE2D39F00FE15F3 /* Assets.xcassets */; };
 		0597B32C1CE2D39F00FE15F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597B32A1CE2D39F00FE15F3 /* LaunchScreen.storyboard */; };
+		05A861121CEC51D3001AB7C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A861111CEC51D3001AB7C2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0597B3281CE2D39F00FE15F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0597B32B1CE2D39F00FE15F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0597B32D1CE2D39F00FE15F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A861111CEC51D3001AB7C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A861121CEC51D3001AB7C2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		0597B3151CE2D39F00FE15F3 = {
 			isa = PBXGroup;
 			children = (
+				05A861111CEC51D3001AB7C2 /* CoreLocation.framework */,
 				0597B3201CE2D39F00FE15F3 /* MapsApp */,
 				0597B31F1CE2D39F00FE15F3 /* Products */,
 			);
@@ -288,6 +292,7 @@
 				0597B3321CE2D39F00FE15F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

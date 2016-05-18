@@ -9,14 +9,20 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     
     @IBOutlet var mapView: MKMapView!
     
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         
         var latitude: CLLocationDegrees = 35.172910
         
@@ -59,6 +65,24 @@ class ViewController: UIViewController {
     }
     
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+        
+        var userLocation: CLLocation = locations[0] as! CLLocation
+        var latitude = userLocation.coordinate.latitude
+        var longitude = userLocation.coordinate.longitude
+        var latDelta: CLLocationDegrees = 0.01
+        
+        var longDelta: CLLocationDegrees = 0.01
+        
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        self.mapView.setRegion(region, animated: false)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
