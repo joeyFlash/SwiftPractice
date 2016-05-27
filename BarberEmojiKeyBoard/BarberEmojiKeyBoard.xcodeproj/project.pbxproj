@@ -14,6 +14,8 @@
 		057A027F1CF3715C00227342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057A027D1CF3715C00227342 /* LaunchScreen.storyboard */; };
 		057A028D1CF3717D00227342 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A028C1CF3717D00227342 /* KeyboardViewController.swift */; };
 		057A02911CF3717D00227342 /* BKeyBoard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 057A028A1CF3717D00227342 /* BKeyBoard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		057A02971CF52A1700227342 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057A02961CF52A1700227342 /* CustomKeyboardInterface.xib */; };
+		057A02991CF794A300227342 /* Barber_emoji.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 057A02981CF794A300227342 /* Barber_emoji.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		057A028A1CF3717D00227342 /* BKeyBoard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BKeyBoard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		057A028C1CF3717D00227342 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		057A028E1CF3717D00227342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		057A02961CF52A1700227342 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
+		057A02981CF794A300227342 /* Barber_emoji.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Barber_emoji.jpg; path = ../../../../Barber_emoji.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				057A028C1CF3717D00227342 /* KeyboardViewController.swift */,
+				057A02981CF794A300227342 /* Barber_emoji.jpg */,
 				057A028E1CF3717D00227342 /* Info.plist */,
+				057A02961CF52A1700227342 /* CustomKeyboardInterface.xib */,
 			);
 			path = BKeyBoard;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057A02991CF794A300227342 /* Barber_emoji.jpg in Resources */,
+				057A02971CF52A1700227342 /* CustomKeyboardInterface.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				057A02851CF3715C00227342 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		057A02921CF3717D00227342 /* Build configuration list for PBXNativeTarget "BKeyBoard" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				057A02941CF3717D00227342 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
