@@ -37,15 +37,15 @@ class TableViewController: UITableViewController {
         return 3
     }
 
-    /*
+  
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = "Test"
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
