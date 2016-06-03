@@ -8,11 +8,20 @@
 
 import UIKit
 
+var places = [Dictionary<String,String>()]
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if(places.count == 1)
+        {
+            places.removeAtIndex(0)
+            
+            //places.append(["name":"Taj Mahal","lat":"27.175277","lon":"78.042128"])
+            places.append(["name":"USI Inc","lat":"35.172910","lon":"-106.590837"])
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,19 +43,25 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return places.count
     }
 
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = places[indexPath.row]["name"]
         return cell
     }
  
-
+    override func viewWillAppear(animated: Bool) {
+        
+        self.tableView.reloadData()
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
